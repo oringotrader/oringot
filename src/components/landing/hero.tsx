@@ -22,12 +22,12 @@ export default function Hero() {
       </div>
       <div className="flex items-center justify-center">
         <Image
-          src="https://placehold.co/600x400.png"
-          alt="Trading charts and graphs"
+          src="/placeholder.webp"
+          alt="Luxury watch and money representing trading success"
           width={600}
           height={400}
           className="h-auto w-full rounded-xl shadow-2xl"
-          data-ai-hint="trading chart"
+          data-ai-hint="finance watch"
         />
       </div>
     </section>
