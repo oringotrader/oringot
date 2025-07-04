@@ -17,7 +17,7 @@ export default function Hero() {
           Learn Stock & Crypto Trading | Join a Community | Get Mentorship & Strategies That Work
         </p>
         <Button onClick={scrollToPricing} size="lg" variant="accent" className="mt-4 w-full sm:w-auto">
-          Join Now – ₹499 Launch Offer
+          Join Now – ₹4,999 Launch Offer
         </Button>
       </div>
       <div className="flex items-center justify-center">

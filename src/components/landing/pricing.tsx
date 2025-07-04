@@ -16,7 +16,7 @@ export default function Pricing() {
     const handlePayment = () => {
         const options = {
             key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID,
-            amount: '49900', // Amount in paisa (499 * 100)
+            amount: '499900', // Amount in paisa (4999 * 100)
             currency: 'INR',
             name: 'OringoTrader Academy',
             description: 'Lifetime Access to All Features',
@@ -67,7 +67,7 @@ export default function Pricing() {
             </CardHeader>
             <CardContent className="flex flex-col items-center">
               <div className="mb-6">
-                <span className="text-5xl font-bold text-accent">₹499</span>
+                <span className="text-5xl font-bold text-accent">₹4,999</span>
                 <span className="text-xl text-muted-foreground">/one-time</span>
               </div>
               <ul className="w-full space-y-2 text-sm">
