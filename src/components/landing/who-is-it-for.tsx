@@ -24,7 +24,7 @@ export default function WhoIsItFor() {
     <section id="who-is-it-for" className="py-12 md:py-24 bg-card">
       <div className="container">
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-foreground md:text-4xl font-headline">
+          <h2 className="text-2xl font-bold tracking-tight text-foreground md:text-4xl font-headline">
             Is This You?
           </h2>
           <p className="mt-4 text-base text-muted-foreground md:text-lg">

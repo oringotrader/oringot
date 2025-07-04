@@ -10,7 +10,7 @@ export default function Hero() {
   return (
     <section id="hero" className="container grid items-center gap-8 py-16 md:grid-cols-2 md:py-24">
       <div className="flex flex-col items-center gap-4 text-center md:items-start md:text-left">
-        <h1 className="text-4xl font-bold tracking-tight text-foreground md:text-5xl lg:text-6xl font-headline">
+        <h1 className="text-3xl font-bold tracking-tight text-foreground md:text-5xl lg:text-6xl font-headline">
           Turn Your Trading Losses into Profits
         </h1>
         <p className="text-base text-muted-foreground md:text-xl">

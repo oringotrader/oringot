@@ -6,7 +6,7 @@ export default function Contact() {
   return (
     <section id="contact" className="container py-12 md:py-24">
       <div className="mx-auto max-w-3xl text-center">
-        <h2 className="text-3xl font-bold tracking-tight text-foreground md:text-4xl font-headline">
+        <h2 className="text-2xl font-bold tracking-tight text-foreground md:text-4xl font-headline">
           Questions? We're Here to Help
         </h2>
         <p className="mt-4 text-base text-muted-foreground md:text-lg">
