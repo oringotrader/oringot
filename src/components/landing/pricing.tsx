@@ -52,7 +52,7 @@ export default function PricingSection() {
   };
 
   return (
-    <div className="text-center mt-12">
+    <section id="pricing" className="scroll-mt-32 text-center mt-12">
       <Button
         className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 text-lg"
         onClick={handlePayment}
@@ -60,6 +60,7 @@ export default function PricingSection() {
       >
         Get All–Inclusive Access
       </Button>
-    </div>
+    </section>
   );
 }
+
