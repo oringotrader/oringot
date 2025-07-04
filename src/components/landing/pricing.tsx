@@ -1,92 +1,65 @@
 'use client';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { Check } from 'lucide-react';
 
-const includedFeatures = [
-    'Educational Videos',
-    'Daily Zoom Counseling',
-    'PDF Algo Strategies',
-    'WhatsApp Group Access',
-    'Private Community App',
-    'Algo Trading Setup Guidance'
-];
+import { Button } from "@/components/ui/button";
+import { useEffect, useState } from "react";
 
-export default function Pricing() {
-    const handlePayment = () => {
-        const options = {
-            key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID,
-            amount: '499900', // Amount in paisa (4999 * 100)
-            currency: 'INR',
-            name: 'OringoTrader Academy',
-            description: 'Lifetime Access to All Features',
-            handler: function (response: any) {
-                // This function is called after a successful payment
-                alert(`Payment successful! Payment ID: ${response.razorpay_payment_id}`);
-                // Here, you would typically verify the payment on your backend
-                // and then grant the user access to your platform.
-            },
-            prefill: {
-                name: '',
-                email: '',
-                contact: '',
-            },
-            notes: {
-                address: 'OringoTrader.info',
-            },
-            theme: {
-                color: '#1F3B73',
-            },
-        };
+export default function PricingSection() {
+  const [isRazorpayLoaded, setIsRazorpayLoaded] = useState(false);
 
-        const rzp = new (window as any).Razorpay(options);
-        
-        rzp.on('payment.failed', function (response: any) {
-            alert(`Payment failed: ${response.error.description}`);
-        });
+  // Dynamically load Razorpay SDK script
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://checkout.razorpay.com/v1/checkout.js";
+    script.onload = () => setIsRazorpayLoaded(true);
+    script.onerror = () => console.error("Razorpay SDK failed to load");
+    document.body.appendChild(script);
+  }, []);
 
-        rzp.open();
+  const handlePayment = () => {
+    if (!(window as any).Razorpay || !isRazorpayLoaded) {
+      alert("Payment system is still loading. Please try again shortly.");
+      return;
     }
 
+    const razorpayKey = process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID;
+    if (!razorpayKey) {
+      alert("Razorpay key not set in environment variables.");
+      return;
+    }
+
+    const options = {
+      key: razorpayKey,
+      amount: 499900, // Amount in paisa
+      currency: "INR",
+      name: "OringoTrader",
+      description: "All-Inclusive Access",
+      image: "/logo.png", // optional logo
+      handler: function (response: any) {
+        alert("Payment successful. Payment ID: " + response.razorpay_payment_id);
+      },
+      prefill: {
+        name: "",
+        email: "",
+        contact: "",
+      },
+      theme: {
+        color: "#f97316",
+      },
+    };
+
+    const rzp = new (window as any).Razorpay(options);
+    rzp.open();
+  };
+
   return (
-    <section id="pricing" className="py-12 md:py-24 bg-card">
-      <div className="container">
-        <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-2xl font-bold tracking-tight text-foreground md:text-4xl font-headline">
-            Simple, All-Inclusive Pricing
-          </h2>
-          <p className="mt-4 text-base text-muted-foreground md:text-lg">
-            One payment. Lifetime access. Everything you need to become a profitable trader.
-          </p>
-        </div>
-        <div className="mt-12 flex justify-center">
-          <Card className="w-full max-w-md shadow-2xl border-2 border-primary">
-            <CardHeader className="text-center">
-              <CardTitle className="text-2xl">Launch Offer</CardTitle>
-              <CardDescription>No tiers, no login needed. Just pure value.</CardDescription>
-            </CardHeader>
-            <CardContent className="flex flex-col items-center">
-              <div className="mb-6">
-                <span className="text-5xl font-bold text-accent">₹4,999</span>
-                <span className="text-xl text-muted-foreground">/one-time</span>
-              </div>
-              <ul className="w-full space-y-2 text-sm">
-                {includedFeatures.map((feature) => (
-                    <li key={feature} className="flex items-center gap-2">
-                        <Check className="size-4 text-green-500" />
-                        <span className="text-muted-foreground">{feature}</span>
-                    </li>
-                ))}
-              </ul>
-            </CardContent>
-            <CardFooter>
-              <Button onClick={handlePayment} className="w-full" size="lg" variant="accent">
-                Get All-Inclusive Access
-              </Button>
-            </CardFooter>
-          </Card>
-        </div>
-      </div>
-    </section>
+    <div className="text-center mt-12">
+      <Button
+        className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 text-lg"
+        onClick={handlePayment}
+        disabled={!isRazorpayLoaded}
+      >
+        Get All–Inclusive Access
+      </Button>
+    </div>
   );
 }
