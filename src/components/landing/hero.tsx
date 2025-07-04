@@ -22,12 +22,12 @@ export default function Hero() {
       </div>
       <div className="flex items-center justify-center">
         <Image
-          src="/hero-image.png"
-          alt="Luxury watch and money representing trading success"
+          src="https://placehold.co/600x400.png"
+          alt="Abstract image representing financial markets and trading"
           width={600}
           height={400}
           className="h-auto w-full rounded-xl shadow-2xl"
-          data-ai-hint="finance watch"
+          data-ai-hint="trading finance"
         />
       </div>
     </section>
