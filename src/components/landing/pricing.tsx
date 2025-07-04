@@ -14,8 +14,38 @@ const includedFeatures = [
 
 export default function Pricing() {
     const handlePayment = () => {
-        // Placeholder for payment gateway integration
-        alert('Redirecting to payment gateway...');
+        const options = {
+            key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID,
+            amount: '49900', // Amount in paisa (499 * 100)
+            currency: 'INR',
+            name: 'OringoTrader Academy',
+            description: 'Lifetime Access to All Features',
+            handler: function (response: any) {
+                // This function is called after a successful payment
+                alert(`Payment successful! Payment ID: ${response.razorpay_payment_id}`);
+                // Here, you would typically verify the payment on your backend
+                // and then grant the user access to your platform.
+            },
+            prefill: {
+                name: '',
+                email: '',
+                contact: '',
+            },
+            notes: {
+                address: 'OringoTrader.info',
+            },
+            theme: {
+                color: '#1F3B73',
+            },
+        };
+
+        const rzp = new (window as any).Razorpay(options);
+        
+        rzp.on('payment.failed', function (response: any) {
+            alert(`Payment failed: ${response.error.description}`);
+        });
+
+        rzp.open();
     }
 
   return (
