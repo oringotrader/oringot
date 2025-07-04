@@ -27,7 +27,7 @@ export default function Hero() {
           width={600}
           height={400}
           className="h-auto w-full rounded-xl shadow-2xl"
-          data-ai-hint="trading finance"
+          data-ai-hint="trading charts"
         />
       </div>
     </section>
