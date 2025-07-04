@@ -22,7 +22,7 @@ export default function Hero() {
       </div>
       <div className="flex items-center justify-center">
         <Image
-          src="/placeholder.webp"
+          src="/hero-image.png"
           alt="Luxury watch and money representing trading success"
           width={600}
           height={400}
