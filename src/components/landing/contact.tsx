@@ -16,13 +16,13 @@ export default function Contact() {
         <TooltipProvider>
           <div className="mt-8 flex flex-col flex-wrap items-center justify-center gap-4 sm:flex-row">
             <Button asChild size="lg" variant="outline">
-              <a href="mailto:oringotrader.info@gmail.com">
+              <a href="mailto:Hello@oringotrader.info">
                 <Mail className="mr-2 size-5" />
                 Email Support
               </a>
             </Button>
             <Button asChild size="lg" variant="outline">
-              <a href="https://wa.me/910000000000" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/919525174769" target="_blank" rel="noopener noreferrer">
                 <WhatsAppIcon className="mr-2 size-5" />
                 WhatsApp Support
               </a>
