@@ -26,7 +26,7 @@ export default function HowItWorks() {
           <h2 className="text-3xl font-bold tracking-tight text-foreground md:text-4xl font-headline">
             Get Started in 3 Simple Steps
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
+          <p className="mt-4 text-base text-muted-foreground md:text-lg">
             We've made it incredibly easy to join and begin transforming your trading results.
           </p>
         </div>

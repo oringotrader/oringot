@@ -9,7 +9,7 @@ export default function Contact() {
         <h2 className="text-3xl font-bold tracking-tight text-foreground md:text-4xl font-headline">
           Questions? We're Here to Help
         </h2>
-        <p className="mt-4 text-lg text-muted-foreground">
+        <p className="mt-4 text-base text-muted-foreground md:text-lg">
           If you have any questions before joining, feel free to reach out to us.
         </p>
         <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">

@@ -25,7 +25,7 @@ export default function Pricing() {
           <h2 className="text-3xl font-bold tracking-tight text-foreground md:text-4xl font-headline">
             Simple, All-Inclusive Pricing
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
+          <p className="mt-4 text-base text-muted-foreground md:text-lg">
             One payment. Lifetime access. Everything you need to become a profitable trader.
           </p>
         </div>

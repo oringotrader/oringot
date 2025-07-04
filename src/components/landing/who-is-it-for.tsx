@@ -27,7 +27,7 @@ export default function WhoIsItFor() {
           <h2 className="text-3xl font-bold tracking-tight text-foreground md:text-4xl font-headline">
             Is This You?
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
+          <p className="mt-4 text-base text-muted-foreground md:text-lg">
             Our platform is designed specifically for beginners and traders who are struggling to find consistent profitability. If you're facing these challenges, you're in the right place.
           </p>
         </div>

@@ -8,15 +8,15 @@ export default function Hero() {
     };
 
   return (
-    <section id="hero" className="container grid items-center gap-8 py-12 md:grid-cols-2 md:py-24">
-      <div className="flex flex-col items-start gap-4">
+    <section id="hero" className="container grid items-center gap-8 py-16 md:grid-cols-2 md:py-24">
+      <div className="flex flex-col items-center gap-4 text-center md:items-start md:text-left">
         <h1 className="text-4xl font-bold tracking-tight text-foreground md:text-5xl lg:text-6xl font-headline">
           Turn Your Trading Losses into Profits
         </h1>
-        <p className="text-lg text-muted-foreground md:text-xl">
+        <p className="text-base text-muted-foreground md:text-xl">
           Learn Stock & Crypto Trading | Join a Community | Get Mentorship & Strategies That Work
         </p>
-        <Button onClick={scrollToPricing} size="lg" variant="accent" className="mt-4">
+        <Button onClick={scrollToPricing} size="lg" variant="accent" className="mt-4 w-full sm:w-auto">
           Join Now – ₹499 Launch Offer
         </Button>
       </div>
@@ -26,7 +26,7 @@ export default function Hero() {
           alt="Trading charts and graphs"
           width={600}
           height={400}
-          className="rounded-xl shadow-2xl"
+          className="h-auto w-full rounded-xl shadow-2xl"
           data-ai-hint="trading chart"
         />
       </div>

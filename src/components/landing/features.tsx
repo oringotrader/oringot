@@ -42,18 +42,18 @@ export default function Features() {
         <h2 className="text-3xl font-bold tracking-tight text-foreground md:text-4xl font-headline">
           Everything You Need to Succeed
         </h2>
-        <p className="mt-4 text-lg text-muted-foreground">
+        <p className="mt-4 text-base text-muted-foreground md:text-lg">
           We provide a comprehensive toolkit to support your trading journey from day one.
         </p>
       </div>
       <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         {features.map((feature) => (
           <Card key={feature.title} className="transition-transform hover:scale-105 hover:shadow-lg">
-            <CardHeader className="flex flex-row items-center gap-4">
+            <CardHeader className="flex flex-col items-center gap-4 text-center md:flex-row md:items-start md:text-left">
               {feature.icon}
               <div>
                 <CardTitle>{feature.title}</CardTitle>
-                <CardDescription className="mt-1">{feature.description}</CardDescription>
+                <CardDescription className="mt-2">{feature.description}</CardDescription>
               </div>
             </CardHeader>
           </Card>
