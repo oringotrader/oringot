@@ -16,7 +16,7 @@ export default function Hero() {
         <p className="text-lg text-muted-foreground md:text-xl">
           Learn Stock & Crypto Trading | Join a Community | Get Mentorship & Strategies That Work
         </p>
-        <Button onClick={scrollToPricing} size="lg" className="mt-4">
+        <Button onClick={scrollToPricing} size="lg" variant="accent" className="mt-4">
           Join Now – ₹499 Launch Offer
         </Button>
       </div>

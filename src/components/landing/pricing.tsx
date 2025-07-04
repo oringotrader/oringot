@@ -37,7 +37,7 @@ export default function Pricing() {
             </CardHeader>
             <CardContent className="flex flex-col items-center">
               <div className="mb-6">
-                <span className="text-5xl font-bold">₹499</span>
+                <span className="text-5xl font-bold text-accent">₹499</span>
                 <span className="text-xl text-muted-foreground">/one-time</span>
               </div>
               <ul className="w-full space-y-2 text-sm">
@@ -50,7 +50,7 @@ export default function Pricing() {
               </ul>
             </CardContent>
             <CardFooter>
-              <Button onClick={handlePayment} className="w-full" size="lg">
+              <Button onClick={handlePayment} className="w-full" size="lg" variant="accent">
                 Get All-Inclusive Access
               </Button>
             </CardFooter>

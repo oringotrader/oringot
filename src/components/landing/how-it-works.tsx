@@ -34,7 +34,7 @@ export default function HowItWorks() {
             <div className="absolute left-1/2 top-1/2 hidden h-1 w-2/3 -translate-x-1/2 -translate-y-1/2 transform border-t-2 border-dashed border-primary md:block"></div>
             <div className="grid gap-8 md:grid-cols-3">
             {steps.map((step) => (
-                <Card key={step.step} className="relative z-10 text-center">
+                <Card key={step.step} className="relative z-10 text-center shadow-md transition-shadow hover:shadow-lg">
                 <CardHeader>
                     <div className="mx-auto flex size-12 items-center justify-center rounded-full bg-primary text-2xl font-bold text-primary-foreground">
                     {step.step}

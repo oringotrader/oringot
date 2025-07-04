@@ -33,7 +33,7 @@ export default function WhoIsItFor() {
         </div>
         <div className="mt-12 grid gap-8 md:grid-cols-3">
           {painPoints.map((point) => (
-            <Card key={point.title} className="flex flex-col items-center text-center">
+            <Card key={point.title} className="flex flex-col items-center text-center shadow-md transition-shadow hover:shadow-lg">
               <CardHeader className="items-center">
                 {point.icon}
                 <CardTitle>{point.title}</CardTitle>
