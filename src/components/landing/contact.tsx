@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
-import { Mail } from 'lucide-react';
+import { Mail, MapPin } from 'lucide-react';
 import { WhatsAppIcon } from '@/components/icons/whatsapp-icon';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 
 export default function Contact() {
   return (
@@ -12,20 +13,35 @@ export default function Contact() {
         <p className="mt-4 text-base text-muted-foreground md:text-lg">
           If you have any questions before joining, feel free to reach out to us.
         </p>
-        <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <Button asChild size="lg" variant="outline">
-            <a href="mailto:oringotrader.info@gmail.com">
-              <Mail className="mr-2 size-5" />
-              Email Support
-            </a>
-          </Button>
-          <Button asChild size="lg" variant="outline">
-            <a href="https://wa.me/910000000000" target="_blank" rel="noopener noreferrer">
-              <WhatsAppIcon className="mr-2 size-5" />
-              WhatsApp Support
-            </a>
-          </Button>
-        </div>
+        <TooltipProvider>
+          <div className="mt-8 flex flex-col flex-wrap items-center justify-center gap-4 sm:flex-row">
+            <Button asChild size="lg" variant="outline">
+              <a href="mailto:oringotrader.info@gmail.com">
+                <Mail className="mr-2 size-5" />
+                Email Support
+              </a>
+            </Button>
+            <Button asChild size="lg" variant="outline">
+              <a href="https://wa.me/910000000000" target="_blank" rel="noopener noreferrer">
+                <WhatsAppIcon className="mr-2 size-5" />
+                WhatsApp Support
+              </a>
+            </Button>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Button asChild size="lg" variant="outline">
+                  <a href="https://g.co/kgs/qXmQwp2" target="_blank" rel="noopener noreferrer">
+                    <MapPin className="mr-2 size-5" />
+                    Visit Office
+                  </a>
+                </Button>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Second Floor, 628, B1 Rd, beside Precious Moments, Block B1, Janakpuri, New Delhi, Delhi, 110058</p>
+              </TooltipContent>
+            </Tooltip>
+          </div>
+        </TooltipProvider>
       </div>
     </section>
   );
