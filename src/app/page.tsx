@@ -3,7 +3,6 @@ import Hero from '@/components/landing/hero';
 import WhoIsItFor from '@/components/landing/who-is-it-for';
 import Features from '@/components/landing/features';
 import HowItWorks from '@/components/landing/how-it-works';
-import SmartStrategy from '@/components/landing/smart-strategy';
 import Pricing from '@/components/landing/pricing';
 import Contact from '@/components/landing/contact';
 import Footer from '@/components/landing/footer';
@@ -16,7 +15,6 @@ export default function Home() {
       <WhoIsItFor />
       <Features />
       <HowItWorks />
-      <SmartStrategy />
       <Pricing />
       <Contact />
       <Footer />
