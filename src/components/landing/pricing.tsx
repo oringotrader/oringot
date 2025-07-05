@@ -51,15 +51,14 @@ export default function PricingSection() {
     rzp.open();
   };
 
-  return (
-    <div className="text-center mt-12">
-      <Button
-        className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 text-lg"
-        onClick={handlePayment}
-        disabled={!isRazorpayLoaded}
-      >
-        Get All–Inclusive Access
-      </Button>
-    </div>
-  );
-}
+ return (
+  <div id="pricing" className="text-center mt-12">
+    <Button
+      className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 text-lg"
+      onClick={handlePayment}
+      disabled={!isRazorpayLoaded}
+    >
+      Get All–Inclusive Access
+    </Button>
+  </div>
+);
