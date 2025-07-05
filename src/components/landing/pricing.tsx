@@ -61,4 +61,6 @@ export default function PricingSection() {
       Get All–Inclusive Access
     </Button>
   </div>
-);
+ );
+
+}
